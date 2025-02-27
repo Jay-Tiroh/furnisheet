@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fake-black: #282828;
+  --color-alt-grey: #7e7e7e;
+  --color-dark-grey: #989898;
+  --color-mid-grey: #d0d0d0; /* Fixed typo (DODODO → D0D0D0) */
+  --color-light-grey: #fbfbfb;
+  --color-white: #ffffff;
+  --color-blue: #559aeb;
+  --color-dark-blue: #3167a7;
+  --color-very-dark-blue: #13293d;
+  --color-error: #ff2323;
+  --color-light-error: #ffd4d4;
+  --color-success: #2ab66a;
+  --color-light-success: #dbfbeb;
+  --color-table-highlight: #fff8e4;
+  --color-input-highlight: #50c9e0;
+  --color-secondary: #fc8510;
+}
+
+:root {
+  font-family: Helvetica;
+  @apply tracking-wide select-none;
+}
+/* @font-face {
+  font-family: Apercu;
+  src: url("/public/assets/fonts/apercu_medium_pro.otf");
+} */
+
+/* NAVBAR */
+.nav-link,
+.pick,
+.others > span {
+  @apply cursor-pointer hover:text-secondary;
+}
+
+.line {
+  content: "";
+}
+
+.drop-down {
+  @apply min-w-48 w-fit min-h-36 gap-1 rounded-lg shadow-xl p-5 bg-white;
+}
+
+.ticked {
+  @apply fill-secondary;
+}
+
+.menu-link {
+  @apply cursor-pointer hover:text-secondary;
+}
+
+.process {
+  @apply md:w-1/6 text-center md:text-xs flex justify-start flex-col gap-3 space-y-5 md:space-y-0 items-center  md:max-w-32 text-xl;
+}
+
+.arrow {
+  @apply flex md:mt-10 justify-center rotate-90 md:rotate-0;
+}
+
+.process .svg svg {
+  @apply size-28 md:size-10 lg:size-14;
+}
+
+.home-btn {
+  @apply text-light-grey bg-secondary flex items-center justify-center text-center tracking-wide font-medium py-2 px-7 rounded-full  mt-3 lg:py-4 lg:px-10 cursor-pointer;
+}
+
+.package-img {
+  @apply min-w-56;
+}
+
+.spending-img {
+  background: url("/public/assets/images/stop-spending-img-1.png");
+  background-size: cover;
+}
+
+.bridge-img {
+  background: url("/public/assets/images/bridge.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.svg-arrow > svg {
+  @apply fill-very-dark-blue hover:fill-secondary;
+}
+
+.card {
+  @apply bg-white w-80 p-5 min-h-48 flex flex-col items-center justify-center rounded-lg shadow-md h-56;
+}
+
+.faq-item {
+  @apply border-t border-mid-grey py-3 flex flex-col gap-4;
+}
+
+.faq-item:last-child {
+  @apply border-b;
+}
+
+.summary {
+  @apply flex justify-between w-full;
+}
+
+.answer {
+  @apply text-[13px];
+}
+
+.summary .svg {
+  @apply scale-100;
+}
+
+.footer-link {
+  @apply text-xs text-alt-grey cursor-pointer;
+}
+
+.footer {
+  @apply space-y-2;
+}
+
+.breadcrumb-link {
+  @apply cursor-pointer hover:text-secondary transition-colors duration-200 ease-in-out;
+}
+
+.sub-link {
+  @apply text-xs font-medium;
+}
+
+.option {
+  @apply p-3 px-10 text-xs cursor-pointer   text-nowrap;
+}
+
+.option:not(.selected) {
+  @apply hover:text-white hover:bg-very-dark-blue;
+}
+.selected {
+  @apply bg-fake-black text-white;
+}
