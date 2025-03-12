@@ -17,10 +17,12 @@
   --color-table-highlight: #fff8e4;
   --color-input-highlight: #50c9e0;
   --color-secondary: #fc8510;
+  --color-faint-secondary: hsla(30, 98%, 53%, 0.1);
 }
 
 :root {
   font-family: Helvetica;
+  /* color: hsla(30, 98%, 53%, 0.404); */
   @apply tracking-wide select-none;
 }
 /* @font-face {
@@ -136,4 +138,19 @@
 }
 .selected {
   @apply bg-fake-black text-white;
+}
+
+.all-packages-img0 {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url("/public/assets/images/swivel-chair.png");
+}
+.all-packages-img1 {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url("/public/assets/images/chair1.png");
+}
+.all-packages-img2 {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url("/public/assets/images/chair3.png");
+
+  /* content: "hey"; */
 }
